@@ -1,18 +1,15 @@
-import './App.css'
-import { Header, Hero, Features, HowItWorks, Community, SignUpIncentives, Footer } from './components'
+import React from "react";
+import { AppHeader, AppContent, AppFooter } from "./components/app";
+import "./App.css";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <Community />
-      <SignUpIncentives />
-      <Footer />
+    <div className="AppContainer">
+      <AppHeader />
+      <AppContent />
+      <AppFooter />
     </div>
   );
 };
 
-export default App
+export default App;

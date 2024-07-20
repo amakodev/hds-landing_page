@@ -1,17 +1,17 @@
-import Header from "./Header";
 import Hero from "./Hero";
+import About from "./About";
 import Features from "./Features";
 import HowItWorks from "./HowItWorks";
 import Community from "./Community";
 import SignUpIncentives from "./SignUpIncentives";
-import Footer from "./Footer";
+import NotFound from "./NotFound";
 
 export {
-  Header,
   Hero,
+  About,
   Features,
   HowItWorks,
   Community,
   SignUpIncentives,
-  Footer
+  NotFound,
 }

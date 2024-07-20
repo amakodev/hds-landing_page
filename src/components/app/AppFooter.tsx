@@ -1,9 +1,8 @@
-import React from 'react';
-import './css/Footer.css';
+import React from "react";
 
-const Footer: React.FC = () => {
+const AppFooter: React.FC = () => {
   return (
-    <footer className="footer">
+    <footer className="AppFooter">
       <div className="social-media">
         <a href="#">Facebook</a>
         <a href="#">Twitter</a>
@@ -25,4 +24,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default AppFooter;
