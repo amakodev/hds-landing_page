@@ -1,100 +1,208 @@
 /*****APP Container*************************************************/
 .AppContainer {
+  /* border: 2px solid yellow; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 
+  overflow-x: hidden;
 }
 
 /*****APP HEADER*************************************************/
 .AppHeader {
-  
-  border: 2px solid red;
+  position: fixed;
+  top: 1rem;
+  width: 80%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 0.5rem 1rem;
   background-color: #0a2e6d;
   color: white;
-  position: sticky;
-  top: 0;
+  border-radius: 1rem;
+  border: 2px solid black;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  .logo {
+  .AppHeader__logo {
     height: 50px;
+    flex-shrink: 0;
   }
-
-  .nav a {
-    margin: 0 15px;
+  
+  .AppHeader__nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .AppHeader__nav a {
     font-size: 1.1em;
     transition: color 0.3s ease;
+    white-space: nowrap;
   }
-
-  .nav a:hover {
+  
+  .AppHeader__nav a:hover {
     color: #ffa500;
   }
-
-  .cta-button {
+  
+  .AppHeader__cta-button {
     padding: 10px 20px;
     background-color: #ffa500;
     color: white;
     font-size: 1em;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
   }
-
-  .cta-button:hover {
+  
+  .AppHeader__cta-button:hover {
     background-color: #ff8500;
+  }
+  
+  .AppHeader__mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .AppHeader__mobile-menu-button.open {
+    transform: rotate(90deg);
+  }
+  
+  @media (max-width: 1000px) {
+    .AppHeader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .AppHeader__nav {
+      flex-direction: column;
+      gap: 10px;
+      display: none;
+      width: 100%;
+      animation: slideDown 0.3s ease forwards;
+    }
+  
+    .AppHeader__nav.open {
+      display: flex;
+    }
+  
+    .AppHeader__mobile-menu-button {
+      display: block;
+    }
+  
+    .AppHeader__cta-button {
+      margin-top: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+  
+    @keyframes slideDown {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   }
 }
 
+
 /*****APP CONTENT*************************************************/
 .AppContent {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  padding-top: 6rem;
+  padding-bottom: 1rem;
+  overflow-y: auto;
 }
 
 /*****APP FOOTER*************************************************/
 .AppFooter {
-  border: 2px solid green;
-  padding: 50px 20px;
-  background-color: #333;
+  width: 100%;
+  border-top: 2px solid black;
+  padding: 1rem;
+  background-color: #000;
   color: white;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
+  gap: 0.5rem;
   z-index: 1000;
 
+  /* Socials Styles */
+  .social-media {
+    /* border: 2px solid white; */
+  }
+
+  /* Quick Links Styles */
+  .quick-links {
+    /* border: 2px solid white; */
+  }
+
+  /* Footer Links */
   .social-media a,
   .quick-links a {
     color: white;
     margin: 0 10px;
     font-size: 1.1em;
     transition: color 0.3s ease;
+
+    &:hover {
+      color: #ffa500;
+    }
   }
 
-  .social-media a:hover,
-  .quick-links a:hover {
-    color: #ffa500;
+  /* Content Info Styles */
+  .contact-info {
+    /* border: 2px solid white; */
+
+    p {
+      margin: 0;
+    }
   }
 
-  .newsletter input {
-    padding: 10px;
-    margin-right: 10px;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+  /* Newsletter Styles */
+  .newsletter {
+    /* border: 2px solid white; */
 
-  .newsletter button {
-    padding: 10px 20px;
-    background-color: #ffa500;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
+    input {
+      padding: 10px;
+      margin-right: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-  .newsletter button:hover {
-    background-color: #ff8500;
+    button {
+      padding: 10px 20px;
+      background-color: #ffa500;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ff8500;
+      }
+    }
   }
 }
