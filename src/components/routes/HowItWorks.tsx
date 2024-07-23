@@ -1,9 +1,10 @@
 import React from 'react';
 import './css/HowItWorks.css';
+import { Link } from 'react-router-dom';
 
 const HowItWorks: React.FC = () => {
   return (
-    <section id="how-it-works" className="how-it-works">
+    <section  className="how">
       <h2>How It Works</h2>
       <div className="steps">
         <div className="step">
@@ -19,6 +20,7 @@ const HowItWorks: React.FC = () => {
           <p>Engage with the community and access exclusive content.</p>
         </div>
       </div>
+      <Link to="/community"><button className="cta-button">Hang with the Dawgs!</button></Link>
     </section>
   );
 };

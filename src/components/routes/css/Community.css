@@ -1,34 +1,84 @@
-/* Community.css */
-.community {
-  padding: 50px 20px;
-  background-color: #0a2e6d;
-  color: white;
-}
-
-.community h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2em;
-}
-
-.testimonials {
+.community-container {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  /* border: 1px solid black; */
+}
+
+.cylinder-container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 30px;
-}
-
-.testimonial {
-  max-width: 300px;
+  align-items: center;
   text-align: center;
-  padding: 20px;
-  background-color: #fff;
-  color: #333;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 1rem;
+
+  /* border: 1px solid black; */
 }
 
-.testimonial p:last-child {
-  font-style: italic;
-  color: #777;
+.cylinder {
+  width: 80%;
+  height: 300px;
+  border: 2px solid #ddd;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  transition: transform 0.3s ease;
+}
+
+.cylinder:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.cylinder .fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffa500;
+  transition: height 1s ease-in-out;
+}
+
+.cylinder-label {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  color: #333;
+}
+
+.cta {
+  margin-top: 10px;
+}
+
+.cta p {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Tooltip styling */
+.cylinder::after {
+  content: attr(title);
+  display: none;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.9em;
+  z-index: 1;
+}
+
+.cylinder:hover::after {
+  display: block;
 }

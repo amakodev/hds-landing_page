@@ -9,8 +9,8 @@ const Hero: React.FC = () => {
       <div className="hero-content">
         <h1>Hey Top Dawg!</h1>
         <p>Who tf you Hangin with?</p>
-        <Link to="about"><button className="cta-button">Tell Me More!</button></Link>
-        <Link to="how"><button className="cta-button">$HDS</button></Link>
+        <Link to="/about"><button className="cta-button">Who?</button></Link>
+        <Link to="/how"><button className="cta-button">$HDS</button></Link>
       </div>
     </section>
   );

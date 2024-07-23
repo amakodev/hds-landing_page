@@ -22,7 +22,6 @@ const AppHeader: React.FC = () => {
         <Link to="features">Features</Link>
         <Link to="how">How It Works</Link>
         <Link to="community">Community</Link>
-        <Link to="signup">Sign Up</Link>
         <button className="AppHeader__cta-button">Enter HDS</button>
       </nav>
     </header>

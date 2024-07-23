@@ -1,10 +1,11 @@
 import React from 'react';
 import './css/Features.css';
 import { FaDog, FaUsers, FaCrown } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Features: React.FC = () => {
   return (
-    <section id="features" className="features">
+    <section className="features">
       <h2>Why Join HandDogSocial?</h2>
       <div className="features-grid">
         <div className="feature-item">
@@ -23,6 +24,7 @@ const Features: React.FC = () => {
           <p>Access premium content and resources available only to members.</p>
         </div>
       </div>
+      <Link to="/how"><button className="cta-button">How does it work?</button></Link>
     </section>
   );
 };
