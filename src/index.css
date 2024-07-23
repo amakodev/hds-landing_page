@@ -1,8 +1,19 @@
 /* index.css */
-body, html {
+
+#root {
+  --blue: #0a2e6dff;
+  --orange: #ffa500ff;
+  --light: #f7f7f7ff;
+  --dark: #333333ff;
+  --green: #17862f;
+  --yellow: #ffeb3bff;
+}
+
+body,
+html {
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }

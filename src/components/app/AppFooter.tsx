@@ -16,7 +16,7 @@ const AppFooter: React.FC = () => {
         <p>Contact us at info@handdogsocial.com</p>
       </div>
       <div className="newsletter">
-        <p>Sign up for our newsletter:</p>
+        <p>Subscribe to our <span>newsletter</span>:</p>
         <input type="email" placeholder="Your email" />
         <button>Subscribe</button>
       </div>

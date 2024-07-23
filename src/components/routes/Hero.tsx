@@ -1,16 +1,17 @@
 import React from 'react';
 import './css/Hero.css';
 import heroImage from '../../assets/hero-image.jpg';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   return (
-    <section className="hero">
+    <section className="hero" style={{backgroundImage: `url(${heroImage})`}}>
       <div className="hero-content">
-        <h1>Unleash Your Social Presence with HandDogSocial</h1>
-        <p>Join the exclusive community where social media meets crypto</p>
-        <button className="cta-button">Get Started</button>
+        <h1>Hey Top Dawg!</h1>
+        <p>Who tf you Hangin with?</p>
+        <Link to="about"><button className="cta-button">Tell Me More!</button></Link>
+        <Link to="how"><button className="cta-button">$HDS</button></Link>
       </div>
-      <img src={heroImage} alt="Hero" className="hero-image" />
     </section>
   );
 };
