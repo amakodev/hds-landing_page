@@ -273,6 +273,15 @@
   gap: 0.5rem;
   z-index: 1000;
 
+  span {
+    color: var(--yellow);
+  }
+
+  a {
+    color: var(--yellow);
+    /* background: var(--light) */
+  }
+
   /* Socials Styles */
   .social-media {
     /* border: 2px solid white; */
@@ -312,10 +321,6 @@
     p {
       font-size: 0.9rem;
       margin: 0.5rem 0;
-    }
-
-    span {
-      color: var(--yellow);
     }
 
     input {

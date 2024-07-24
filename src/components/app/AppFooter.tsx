@@ -4,16 +4,16 @@ const AppFooter: React.FC = () => {
   return (
     <footer className="AppFooter">
       <div className="social-media">
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
         <a href="#">Instagram</a>
+        <a href="#">X</a>
+        <a href="#">Telegram</a>
       </div>
       <div className="quick-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="#">Whitepaper</a>
+        <a href="#">RoadMap</a>
       </div>
       <div className="contact-info">
-        <p>Contact us at info@handdogsocial.com</p>
+        <p>HOWL US at <a href="mailto:info@handdogsocial.com">info@handdogsocial.com</a></p>
       </div>
       <div className="newsletter">
         <p>Subscribe to our <span>newsletter</span>:</p>
