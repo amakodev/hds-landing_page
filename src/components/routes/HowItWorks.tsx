@@ -6,16 +6,16 @@ const HowItWorks: React.FC = () => {
   return (
     <section  className="how">
       <h2>How It Works</h2>
-      <div className="steps">
-        <div className="step">
+      <div className="card-grid">
+        <div className="card">
           <h3>Step 1</h3>
           <p>Sign up and get your exclusive ERC20 tokens.</p>
         </div>
-        <div className="step">
+        <div className="card">
           <h3>Step 2</h3>
           <p>Use tokens to boost your social media presence.</p>
         </div>
-        <div className="step">
+        <div className="card">
           <h3>Step 3</h3>
           <p>Engage with the community and access exclusive content.</p>
         </div>

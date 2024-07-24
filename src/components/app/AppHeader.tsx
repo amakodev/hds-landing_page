@@ -12,17 +12,17 @@ const AppHeader: React.FC = () => {
   return (
     <header className="AppHeader">
       <Link to="">
-        <img src={logo} alt="HandDogSocial Logo" className="AppHeader__logo" />
+        <img src={logo} alt="HandDogSocial Logo" className="logo" />
       </Link>
-      <button className="AppHeader__mobile-menu-button" onClick={toggleMobileMenu}>
+      <button className="mobile-menu-button" onClick={toggleMobileMenu}>
         ☰
       </button>
-      <nav className={`AppHeader__nav ${isMobileMenuOpen ? "open" : ""}`}>
+      <nav className={`nav ${isMobileMenuOpen ? "open" : ""}`}>
         <Link to="about">About</Link>
         <Link to="features">Features</Link>
         <Link to="how">How It Works</Link>
         <Link to="community">Community</Link>
-        <button className="AppHeader__cta-button">Enter HDS</button>
+        <button className="header-button">Enter HDS</button>
       </nav>
     </header>
   );

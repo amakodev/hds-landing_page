@@ -18,7 +18,7 @@ const AppFooter: React.FC = () => {
       <div className="newsletter">
         <p>Subscribe to our <span>newsletter</span>:</p>
         <input type="email" placeholder="Your email" />
-        <button>Subscribe</button>
+        <button className="cta-button">Subscribe</button>
       </div>
     </footer>
   );
